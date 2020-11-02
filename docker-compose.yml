@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - '${NGINIX_PORT}:${AVATARS_PORT}'
+    network_mode: bridge
+    restart: always
+
+volumes:
+  data:
